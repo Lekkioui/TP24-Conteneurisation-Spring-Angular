@@ -24,4 +24,28 @@ public class Categorie {
     @OneToMany(targetEntity = Appareil.class , mappedBy = "categorie", fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"categorie"})
     List<Appareil> appareilList;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public List<Appareil> getAppareilList() {
+        return appareilList;
+    }
+
+    public void setAppareilList(List<Appareil> appareilList) {
+        this.appareilList = appareilList;
+    }
 }
